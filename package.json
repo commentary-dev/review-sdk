@@ -1,0 +1,47 @@
+{
+  "name": "@commentary-dev/review-sdk",
+  "version": "0.1.0",
+  "description": "Browser SDK for Commentary Live Preview Reviews.",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://commentary.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/commentary-dev/review-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/commentary-dev/review-sdk/issues"
+  },
+  "keywords": [
+    "commentary",
+    "review",
+    "preview",
+    "comments",
+    "sdk"
+  ],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/commentary-review-sdk.js"
+    },
+    "./browser": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/commentary-review-sdk.js"
+    },
+    "./commentary-review-sdk.js": "./dist/commentary-review-sdk.js"
+  },
+  "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "node ../../scripts/build-review-sdk.mjs",
+    "pack:dry-run": "npm pack --dry-run"
+  }
+}
